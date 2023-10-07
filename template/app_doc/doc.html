@@ -91,21 +91,21 @@
         <i class="layui-icon layui-icon-log"></i> {{ doc.modify_time }}
     </span>
 
-    <button id="share" class="doc-bottom-btn" tooltip="{% trans '转发本文档' %}">
-        <i class="layui-icon layui-icon-share" ></i> {% trans "转发文档" %}
-    </button>
+<!--    <button id="share" class="doc-bottom-btn" tooltip="{% trans '转发本文档' %}">-->
+<!--        <i class="layui-icon layui-icon-share" ></i> {% trans "转发文档" %}-->
+<!--    </button>-->
 
-    <span class="doc-bottom-icon">
-        {% if request.user.is_authenticated %}
-            {% if is_collect_doc %}
-            <i class="layui-icon layui-icon-star-fill collected" id="collect_doc"></i> {% trans "收藏文档" %}
-            {% else %}
-            <i class="layui-icon layui-icon-star" id="collect_doc"></i> {% trans "收藏文档" %}
-            {% endif %}
-        {% else %}
-            <i class="layui-icon layui-icon-star" title="请登录后收藏"></i> {% trans "收藏文档" %}
-        {% endif %}
-    </span>
+<!--    <span class="doc-bottom-icon">-->
+<!--        {% if request.user.is_authenticated %}-->
+<!--            {% if is_collect_doc %}-->
+<!--            <i class="layui-icon layui-icon-star-fill collected" id="collect_doc"></i> {% trans "收藏文档" %}-->
+<!--            {% else %}-->
+<!--            <i class="layui-icon layui-icon-star" id="collect_doc"></i> {% trans "收藏文档" %}-->
+<!--            {% endif %}-->
+<!--        {% else %}-->
+<!--            <i class="layui-icon layui-icon-star" title="请登录后收藏"></i> {% trans "收藏文档" %}-->
+<!--        {% endif %}-->
+<!--    </span>-->
 
     {% if request.user == doc.create_user or request.user.is_superuser or request.user == project.create_user %}
     <button class="doc-bottom-btn" tooltip="{% trans '下载文档' %}" id="download_doc">
